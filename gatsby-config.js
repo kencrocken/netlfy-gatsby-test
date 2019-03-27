@@ -61,9 +61,9 @@ module.exports = {
         short_name: `HPi`,
         start_url: `/`,
         background_color: `#8c8c8c`,
-        theme_color: `#ffa500`,
+        theme_color: `#ff6347`,
         display: `minimal-ui`,
-        icon: `content/assets/favicon.png`,
+        icon: `content/assets/lol-icon.png`
       },
     },
     `gatsby-plugin-offline`,
