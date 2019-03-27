@@ -1,0 +1,14 @@
+.gatsby-highlight { color: #fff }
+pre {    
+    background: rgba(0,0,0,.1);
+    padding: 21px;
+    border-radius: 3px;
+}
+.token.keyword { color: #001c33 }
+.token.function { color: #a2d6e6 }
+.token.error { border: 1px solid #FF0000 }
+.token.class-name { 
+    color: darkred;
+    font-weight: 700;
+    font-style: italic } /* Keyword */
+.token.parameter { font-style: italic } /* Comment.Multiline */

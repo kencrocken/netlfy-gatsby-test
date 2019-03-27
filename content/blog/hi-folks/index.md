@@ -29,9 +29,25 @@ way. On her way she met a copy.
 
 ### Overlaid the jeepers uselessly much excluding
 
+```javascript
+const dhtSensor = require('node-dht-sensor')
+class Sensor {
+    constructor(type, pin){
+        this.type = type
+        this.pin = pin
+    }
+    readValues() {
+        return dhtSensor.read(this.type, this.pin)
+    }
+}
+
+const sensor = new Sensor(11, 11)
+const value = sensor.readValues()
+console.log(value.temperature, value.humidity)
+```
 But nothing the copy said could convince her and so it didn’t take long until a
 few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
+[Longe and Parole](http://google.com) and dragged her `into their agency`, where
 they abused her for their projects again and again. And if she hasn’t been
 rewritten, then they are still using her.
 
