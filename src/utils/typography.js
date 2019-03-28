@@ -1,6 +1,5 @@
 import Typography from 'typography'
 import CodePlugin from 'typography-plugin-code'
-// import OceanBeach from 'typography-theme-ocean-beach'
 
 const typography = new Typography({
   googleFonts: [
