@@ -52,7 +52,7 @@ const typography = new Typography({
       letterSpacing: ".5px"
     },
     blockquote: {
-      color: "#DCDCDC",
+      color: "#D0D0D0",
       borderLeft: '5px solid rgba(255,165,0,.6)',
       marginLeft: 0,
       paddingLeft: '2.5rem',
