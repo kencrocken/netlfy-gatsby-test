@@ -7,41 +7,14 @@
 import { graphql, StaticQuery } from "gatsby";
 import * as React from "react";
 
-import Image from "gatsby-image";
-
-import { rhythm } from "../utils/typography";
 import PostFooter from "./postFooter";
-
-interface IFixedObject {
-    width: number;
-    height: number;
-    src: string;
-    srcSet: string;
-}
-interface IBioProps {
-    data: {
-        avatar: {
-            childImageSharp: {
-                fixed: IFixedObject,
-            };
-        },
-        site: {
-            siteMetadata: {
-                author: string;
-                social: {
-                    twitter: string;
-                }
-            };
-        };
-    };
-}
 
 const Bio = () => {
     return (
         <StaticQuery
             query={bioQuery}
             // tslint:disable-next-line: jsx-no-lambda
-            render={(data: IBioProps) => <PostFooter {...data} />}
+            render={(data) => <PostFooter {...data} />}
         />
     );
 };

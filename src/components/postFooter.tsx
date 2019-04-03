@@ -4,29 +4,39 @@ import Image from "gatsby-image";
 import { rhythm } from "../utils/typography";
 
 interface IFixedObject {
-    width: number;
     height: number;
     src: string;
     srcSet: string;
+    width: number;
 }
 
 interface IPostFooterProps {
     avatar: {
         childImageSharp: {
-            fixed: IFixedObject;
-        },
+            fixed: IFixedObject,
+        };
     };
     site: {
         siteMetadata: {
-            author: string;
+            author: string,
             social: {
-                twitter: string;
-            }
-        },
+                twitter: string,
+            };
+        };
     };
-
 }
+
 const DEFAULT_PROPS = {
+    avatar: {
+        childImageSharp: {
+            fixed: {
+                height: 0,
+                src: "",
+                srcSet: "",
+                width: 0,
+            },
+        },
+    },
     site: {
         siteMetadata: {
             author: "",
@@ -35,8 +45,7 @@ const DEFAULT_PROPS = {
     },
 };
 
-const PostFooter: React.FunctionComponent<IPostFooterProps> = (props) => {
-    const { avatar, site } = props;
+const PostFooter: React.FunctionComponent<IPostFooterProps> = ({avatar, site}) => {
     const { author, social } = site.siteMetadata;
     const footerStyles = {
         alignItems: `center`,
@@ -52,21 +61,17 @@ const PostFooter: React.FunctionComponent<IPostFooterProps> = (props) => {
     };
 
     return (
-        <div
-            // tslint:disable-next-line: jsx-no-multiline-js
-            style={footerStyles}
-        >
+        <div style={footerStyles}>
             <Image
                 alt={author}
                 fixed={avatar.childImageSharp.fixed}
                 imgStyle={{ borderRadius: `50%` }}
-                // tslint:disable-next-line: jsx-no-multiline-js
                 style={imageStyles}
             />
             <p style={{ margin: 0 }}>
                 Written by <strong>{author}</strong> who lives and works in the
                 Baltimore/DC Metro area building useful things.
-        {` `}
+                {` `}
                 <a href={`https://twitter.com/${social.twitter}`}>
                     You should follow him on Twitter
         </a>

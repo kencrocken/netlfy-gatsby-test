@@ -1,13 +1,13 @@
 import * as React from "react";
 
-const IFooter: React.FunctionComponent<{}> = () => {
+const Footer: React.FunctionComponent<{}> = () => {
     const footerStyles = {
+        alignItems: "center",
         display: "flex",
         flexDirection: "column" as "column",
         fontSize: "0.8rem",
     };
     const umbrellaStyle = {
-        alignSelf: "center",
         opacity: 0.3,
         padding: "1rem",
     };
@@ -20,9 +20,8 @@ const IFooter: React.FunctionComponent<{}> = () => {
         <div style={umbrellaStyle}>
             {` ☂ `}
         </div>
-        {/* <a href="https://www.gatsbyjs.org">Gatsby</a> */}
     </footer>
     );
 };
 
-export default IFooter;
+export default Footer;
